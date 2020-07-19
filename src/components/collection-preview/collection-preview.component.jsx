@@ -13,8 +13,11 @@ const CollectionPreview = ({title, items}) => (
           /* .map((item) => (
             <div key={item.id}>{item.name}</div> 
         ))*/
-          .map(({id, ...otherItemProps}) => (
+          /* .map(({id, ...otherItemProps}) => (
             <CollectionItem key={id} {...otherItemProps} />
+          )) */
+          .map(item => (
+            <CollectionItem key={item.id} item={item} />
           ))
       }
     </div>
